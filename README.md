@@ -16,4 +16,10 @@ find_element_by_class_name
 find_element_by_tag_name
 find_element_by_link_text
 
+-Beautiful soup를 사용하여 데이터 추출하기-
+1) find() : 주어진 조건을 만족하는 첫 번째 태그 값만 가져오기
+2) find_all() : 해당 태그가 여러 개 있을 경우 한꺼번에 모두 가져오기
+3) select() : css selector를 활용해서 원하는 태그를 찾는 방법. 자세한 방법은 책 참고할 것
+4) .string or .get_text()를 사용해서 text만 추출할 수 있다.
+
 
