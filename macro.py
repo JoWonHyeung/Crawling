@@ -23,7 +23,8 @@ input_js = ' \
     '.format(id = "19013137", pw = "dnjsgud@12")
 broswer.execute_script(input_js)
 elem = broswer.find_element_by_id("loginBtn").click()
-time.sleep(3)
+time.sleep(1)
+
 #2. '주의사항 확인' 클릭
 broswer.find_element_by_link_text("확인").click()
 time.sleep(3)                                                                                                                              
@@ -38,3 +39,4 @@ time.sleep(3)
 
 #5. '수강신청' 클릭
 broswer.find_element_by_id("mf_wfrLeftTreeMenu_treLeftMenu_label_27").click()
+
