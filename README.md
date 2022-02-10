@@ -22,4 +22,9 @@ find_element_by_link_text
 3) select() : css selector를 활용해서 원하는 태그를 찾는 방법. 자세한 방법은 책 참고할 것
 4) .string or .get_text()를 사용해서 text만 추출할 수 있다.
 
+-driver 실행시 오류 메세지 제거-
+options = webdriver.ChromeOptions()
+options.add_experimental_option('excludeSwitches', ['enable-logging'])
+driver = webdriver.Chrome(chrome_path,options=options)
+driver.maximize_window()
 
