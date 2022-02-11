@@ -1,6 +1,6 @@
 # WebCrawling
 
--웹 크롤링의 원리-
+# -웹 크롤링의 원리-
 1. 파이썬 언어로 Selenium에게 특정 웹 페이지를 크롤링하라고 명령한다
 2. Selenium은 Web Driver를 실행하여 웹페이지에 접속
 3. 웹페이지를 현재 컴퓨터로 가져온다
@@ -23,9 +23,9 @@ find_element_by_link_text
 4) .string or .get_text()를 사용해서 text만 추출할 수 있다.
 
 -driver 실행시 오류 메세지 제거-
-
+```python
 options = webdriver.ChromeOptions()
 options.add_experimental_option('excludeSwitches', ['enable-logging'])
 driver = webdriver.Chrome(chrome_path,options=options)
 driver.maximize_window()
-
+```
