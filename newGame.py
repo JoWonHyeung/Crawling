@@ -1,2 +1,0 @@
-print("newGame")
-print("hello")
