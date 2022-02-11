@@ -23,6 +23,7 @@ find_element_by_link_text
 4) .string or .get_text()를 사용해서 text만 추출할 수 있다.
 
 -driver 실행시 오류 메세지 제거-
+
 options = webdriver.ChromeOptions()
 options.add_experimental_option('excludeSwitches', ['enable-logging'])
 driver = webdriver.Chrome(chrome_path,options=options)
