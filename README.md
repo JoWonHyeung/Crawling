@@ -29,3 +29,6 @@ options.add_experimental_option('excludeSwitches', ['enable-logging'])
 driver = webdriver.Chrome(chrome_path,options=options)
 driver.maximize_window()
 ```
+
+### - pyinstaller 오류 해결
+- https://stackoverflow.com/questions/44740792/pyinstaller-no-module-named-pyinstaller
