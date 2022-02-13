@@ -28,8 +28,8 @@ f_dir = input("파일이 저장될 경로를 쓰세요(ex:C://tmp//) : ")
 
 now = datetime.datetime.now()
 
-f_name = f_dir + f'Instagram-{query_txt}-{now.year}-{now.month:02}-{now.day:02}' + '.txt'
-fc_name = f_dir + f'Instagram_{query_txt}-{now.year}-{now.month:02}-{now.day:02}' + '.csv'
+fx_name = f_dir + f'Instagram-{query_txt}-{now.year}-{now.month:02}-{now.day:02}' + '.txt'
+fc_name = f_dir + f'Instagram-{query_txt}-{now.year}-{now.month:02}-{now.day:02}' + '.csv'
 
 #2 driver 실행
 chrome_path = "C:\\tmp\\chromedriver.exe"
@@ -104,7 +104,7 @@ for c in range(0, len(item)):
     html = broswer.page_source
     soup = BeautifulSoup(html, 'html.parser')
     
-    f = open(f_name,'a',encoding='UTF-8')
+    f = open(fx_name,'a',encoding='UTF-8')
     
     tags = soup.find('div','EtaWk')
     
@@ -127,11 +127,12 @@ for c in range(0, len(item)):
     f.close()
     
     
-# #7 csv파일 저장
-# import pandas as pd
+#7 csv파일 저장
+import pandas as pd
+from pandas import DataFrame
 
-# df = pd.DataFrame()
-# df['HashTag'] = hash_txt
+df = pd.DataFrame()
+df['HashTag'] = hash_txt
 
-# df.to_csv(fc_name,index=False,encoding="utf-8-sig")
-# print("===수집완료===")    
+df.to_csv(fc_name,index=False,encoding="utf-8-sig")
+print("===수집완료===")    
