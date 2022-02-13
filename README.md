@@ -9,11 +9,17 @@
 
 ### -웹 페이지의 특정 element에 접근하는 다양한 방식들-
 find_element_by_id
+
 find_element_by_name
+
 find_element_by_xpath
+
 find_element_by_css_selector
+
 find_element_by_class_name
+
 find_element_by_tag_name
+
 find_element_by_link_text
 
 ### -Beautiful soup를 사용하여 데이터 추출하기-
