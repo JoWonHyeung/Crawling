@@ -38,3 +38,39 @@ driver.maximize_window()
 
 ### - pyinstaller 오류 해결
 - https://stackoverflow.com/questions/44740792/pyinstaller-no-module-named-pyinstaller
+
+# 실습 내용
+
+### 1.py / 2.py
+ 'http://www.riss.kr/' 사이트에서 입력한 키워드로 논문을 검색하고 데이터를 수집하였다.
+
+ 
+### 3.py
+ 'https://datalab.naver.com/' 에서 분야별 인기 검색어 Top500에서 데이터를 수집하였다.
+
+### 4.py
+ 인스타그램에서 해시태그 정보를 수집하였다.
+ 
+ - 스크롤 다운 함수 
+ ```python
+ def scroll_down(browser):
+    broswer.execute_script("window.scrollTo(0,document.body.scrollHeight);")
+    time.sleep(5)
+ 
+ i = 1
+ while i <= cnt:
+    scroll_down(broswer)
+    i += 1
+ ```
+  - 비트맵 이미지 아이콘을 위한 대체 딕셔너리 생성
+ ```python
+ import sys
+ bmp_map = dict.fromkeys(range(0x10000,sys.maxunicode + 1), 0xfffd)
+ ```
+   - 글자로 변환 후 글자가 분리되지 않도록 normalize해준다.
+ ```python
+ tags = tags_1[d].get_text()
+ tags_11 = tags.translate(bmp_map)
+ tags_2 = unicodedata.normalize('NFC',tags_11)
+ ```
+ 
