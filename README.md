@@ -35,9 +35,12 @@ options.add_experimental_option('excludeSwitches', ['enable-logging'])
 driver = webdriver.Chrome(chrome_path,options=options)
 driver.maximize_window()
 ```
-
 ### - pyinstaller 오류 해결
 - https://stackoverflow.com/questions/44740792/pyinstaller-no-module-named-pyinstaller
+
+### - VScode보다는 jupyter notebook으로 작업할 것
+jupyter notebook은 코드를 작성하면 바로 실행 결과를 보여주기 때문에 시간을 굉장히 많이 줄일 수 있다.
+
 
 # 실습 내용
 
