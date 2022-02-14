@@ -26,8 +26,8 @@ elem = broswer.find_element_by_id("loginBtn").click()
 time.sleep(3)
 
 #2. '주의사항 확인' 클릭
-#broswer.find_element_by_link_text("확인").click()
-#time.sleep(3)                                                                                                                              
+broswer.find_element_by_link_text("확인").click()
+time.sleep(3)                                                                                                                              
 
 #3. '수업/성적' 클릭
 broswer.find_element_by_id("mf_wfrLeftTreeMenu_treLeftMenu_label_22").click()
