@@ -23,11 +23,11 @@ input_js = ' \
     '.format(id = "19013137", pw = "dnjsgud@12")
 broswer.execute_script(input_js)
 elem = broswer.find_element_by_id("loginBtn").click()
-time.sleep(1)
+time.sleep(3)
 
 #2. '주의사항 확인' 클릭
-broswer.find_element_by_link_text("확인").click()
-time.sleep(3)                                                                                                                              
+#broswer.find_element_by_link_text("확인").click()
+#time.sleep(3)                                                                                                                              
 
 #3. '수업/성적' 클릭
 broswer.find_element_by_id("mf_wfrLeftTreeMenu_treLeftMenu_label_22").click()
@@ -38,5 +38,10 @@ broswer.find_element_by_id("mf_wfrLeftTreeMenu_treLeftMenu_label_23").click()
 time.sleep(3)
 
 #5. '수강신청' 클릭
-broswer.find_element_by_id("mf_wfrLeftTreeMenu_treLeftMenu_label_27").click()
+broswer.find_element_by_link_text("수강신청").click()
+time.sleep(3)
+
+#6. 'NEXT' 클릭
+broswer.find_element_by_xpath("//*[@id='mf_tabMainCon_contents_SELF_STUDSELF_SUB_30SELF_MENU_10SueReqLesnEGuide_body_btn_nextMiddle']")
+time.sleep(3)
 

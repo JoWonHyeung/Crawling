@@ -62,7 +62,6 @@ for a in range(1, collect_page_cnt + 1):
     soup_2 = BeautifulSoup(html_2,'html.parser')
     
     content_2 = soup_2.find('div','srchResultListW').find_all('li')
-   
     
     
     for b in content_2:
