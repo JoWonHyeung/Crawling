@@ -77,3 +77,25 @@ jupyter notebook은 코드를 작성하면 바로 실행 결과를 보여주기 
  tags_2 = unicodedata.normalize('NFC',tags_11)
  ```
  
+ ### 5.ipynb 
+  
+   4.py에 이미지 수집기능을 추가하였다.
+   
+   urllib.request.urlretrieve(가져올 이미지 주소, 저장할 경로와 이름)
+
+ - 이미지 수집
+ ```python
+import urllib.request
+import urllib
+try:
+    photo = soup.find('div','KL4Bh').find('img')['src']
+except:
+    continue
+else:
+    urllib.request.urlretrieve(photo,image_path + str(file_no) + '.jpg')
+    time.sleep(0.5)
+    file_no += 1
+ ```
+ 
+
+ 
