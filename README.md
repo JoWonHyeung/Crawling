@@ -40,7 +40,7 @@ driver.maximize_window()
 
 ### - VScode보다는 jupyter notebook으로 작업할 것
 jupyter notebook은 코드를 작성하면 바로 실행 결과를 보여주기 때문에 시간을 굉장히 많이 줄일 수 있다.
-
+하지만, 코드 자동 완성기능이 없어 매우 불편하다.
 
 # 실습 내용
 
