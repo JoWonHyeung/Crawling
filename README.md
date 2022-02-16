@@ -42,6 +42,12 @@ driver.maximize_window()
 jupyter notebook은 코드를 작성하면 바로 실행 결과를 보여주기 때문에 시간을 굉장히 많이 줄일 수 있다.
 하지만, 코드 자동 완성기능이 없어 매우 불편하다.
 
+- jupyter notebook 실행 명령어
+```python
+python -m notebook
+
+```
+
 # 실습 내용
 
 ### 1.py / 2.py
@@ -77,3 +83,46 @@ jupyter notebook은 코드를 작성하면 바로 실행 결과를 보여주기 
  tags_2 = unicodedata.normalize('NFC',tags_11)
  ```
  
+ ### 5.ipynb 
+  
+   4.py에 이미지 수집기능을 추가하였다.
+   
+   urllib.request.urlretrieve(가져올 이미지 주소, 저장할 경로와 이름)
+
+ - 이미지 수집
+ ```python
+import urllib.request
+import urllib
+try:
+    photo = soup.find('div','KL4Bh').find('img')['src']
+except:
+    continue
+else:
+    urllib.request.urlretrieve(photo,image_path + str(file_no) + '.jpg')
+    time.sleep(0.5)
+    file_no += 1
+ ```
+ 
+ ### 6.ipynb
+ https://thinkyou.co.kr 에서 공모전/대외활동 정보들을 수집한다. 현재 작업중인 WebProject에 실시간으로 공모전/대외활동 정보들을 사용자에게 제공할 예정이다.
+ 
+- 마우스 이동
+```python
+from selenium.webdriver.common.action_chains import ActionChains
+
+a = ActionChains(driver)
+m= driver.find_element_by_xpath('//*[@id="gnb"]/li[1]/a/span')
+a.move_to_element(m).perform()
+```
+    
+ - UnicodeEncodeError 해결
+
+한글 검색어를 아스키 코드로 표현할 수 없기 때문에 문제이다. 두 가지 해결 방법이 있으나, 첫 번째 방법만 소개하고 다른 해결 방법은 링크를 제공한다.
+[해결 방안2](https://hengbokhan.tistory.com/25)
+
+```python
+from urllib.parse import quote
+
+query = quote('테스트') #quote로 묶는다.
+```
+
