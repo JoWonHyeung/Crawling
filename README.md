@@ -103,5 +103,26 @@ else:
     file_no += 1
  ```
  
-
+ ### 6.ipynb
+ https://thinkyou.co.kr 에서 공모전/대외활동 정보들을 수집한다. 현재 작업중인 WebProject에 실시간으로 공모전/대외활동 정보들을 사용자에게 제공할 예정이다.
  
+- 마우스 이동
+```python
+from selenium.webdriver.common.action_chains import ActionChains
+
+a = ActionChains(driver)
+m= driver.find_element_by_xpath('//*[@id="gnb"]/li[1]/a/span')
+a.move_to_element(m).perform()
+```
+    
+ - UnicodeEncodeError 해결
+
+한글 검색어를 아스키 코드로 표현할 수 없기 때문에 문제이다. 두 가지 해결 방법이 있으나, 첫 번째 방법만 소개하고 다른 해결 방법은 링크를 제공한다.
+[해결 방안2](https://hengbokhan.tistory.com/25)
+
+```python
+from urllib.parse import quote
+
+query = quote('테스트') #quote로 묶는다.
+```
+
