@@ -125,4 +125,6 @@ from urllib.parse import quote
 
 query = quote('테스트') #quote로 묶는다.
 ```
+ 
+  
 
