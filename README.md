@@ -48,6 +48,21 @@ python -m notebook
 
 ```
 
+### element vs elements
+ 
+ driver.find_element_by_xxx : 조건에 맞는 요소 한 개 찾기, webElement 객체 리턴
+ 
+ driver.find_elements_by_xxx : 조건에 맞는 모든 요소 찾기, list 객체 리턴
+ 
+### 요소의 정보 추출
+ 
+element.tag_name : 태그명 추출
+
+element.text : 텍스트 형식의 콘텐츠
+
+element.get_attribute('속성명') : 속성값
+
+
 # 실습 내용
 
 ### 1.py / 2.py
@@ -125,6 +140,6 @@ from urllib.parse import quote
 
 query = quote('테스트') #quote로 묶는다.
 ```
- 
+
   
 
