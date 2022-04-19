@@ -48,19 +48,23 @@ python -m notebook
 
 ```
 
-### element vs elements
+### - element vs elements
  
  driver.find_element_by_xxx : 조건에 맞는 요소 한 개 찾기, webElement 객체 리턴
  
  driver.find_elements_by_xxx : 조건에 맞는 모든 요소 찾기, list 객체 리턴
  
-### 요소의 정보 추출
+### - 요소의 정보 추출
  
 element.tag_name : 태그명 추출
 
 element.text : 텍스트 형식의 콘텐츠
 
 element.get_attribute('속성명') : 속성값
+
+### - ect...
+
+driver.implicitly_wait(3) : 경우에 따라 페이지 로드가 완료되거나 시작되기 전에 webdriver가 제어권을 반환 할 수 있다. 견고성을 확보하려면 explicit and impliciy waits를 사용하여 요소가 페이지에 존재할 때까지 대기
 
 
 # 실습 내용
