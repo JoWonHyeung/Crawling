@@ -66,6 +66,11 @@ element.get_attribute('속성명') : 속성값
 
 driver.implicitly_wait(3) : 경우에 따라 페이지 로드가 완료되거나 시작되기 전에 webdriver가 제어권을 반환 할 수 있다. 견고성을 확보하려면 explicit and impliciy waits를 사용하여 요소가 페이지에 존재할 때까지 대기
 
+URL 인코딩 규칙을 적용해서 변환된 것을 서버에 전달
+1. 영문, 숫자는 그대로
+2. 한글은 16진수로 변환해서 전달
+3. 공백문자는 + 기호로 변환해서 
+
 
 # 실습 내용
 
