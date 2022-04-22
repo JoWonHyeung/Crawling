@@ -71,6 +71,16 @@ URL 인코딩 규칙을 적용해서 변환된 것을 서버에 전달
 2. 한글은 16진수로 변환해서 전달
 3. 공백문자는 + 기호로 변환해서 
 
+font 설정
+```python
+import matplotlib
+import matplotlib.font_manager as fm
+fm.get_fontconfig_fonts()
+# font_location = '/usr/share/fonts/truetype/nanum/NanumGothicOTF.ttf'
+font_location = 'C:/Windows/Fonts/NanumGothic.ttf' # For Windows
+font_name = fm.FontProperties(fname=font_location).get_name()
+matplotlib.rc('font', family=font_name)
+```
 
 # 실습 내용
 
