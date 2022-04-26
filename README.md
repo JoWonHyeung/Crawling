@@ -168,3 +168,24 @@ font_location = 'C:/Windows/Fonts/NanumGothic.ttf' # For Windows
 font_name = fm.FontProperties(fname=font_location).get_name()
 matplotlib.rc('font', family=font_name)
 ```
+
+- 단계구분도(Choropleth map)
+
+각기 다른 음영이나 색상 또는 값으로 각 지역과 관련된 데이터를 표현한 지도
+
+지도 데이터 파일 (.geojson) - 지역에 대한 경계 정보를 제공
+
+시각화 하고자 하는 데이터 파일 (.csv 등) - 지역별로 표현하고자 하는 데이터를 제공
+
+Choropleth와 같은 레이어를 만들 때 위의 이 두 데이터를 파라미터로 넘겨줘야 하는데 데이터는 각자 다른 파일에 있으므로, 시각화할 데이터를 지도에 얹으려면 두 데이터를 매핑해야 한다.
+
+```python
+folium.Choropleth(
+geo_data = "지도 데이터 파일 경로 (.geojson, geopandas.DataFrame)"
+data = "시각화 하고자 하는 데이터파일. (pandas.DataFrame)"
+columns = (지도 데이터와 매핑할 데이터, 시각화 하고려는 데이터),
+key_on = "지도 데이터 파일에서 데이터 파일과 매핑할 값 feature.properties.xxx",
+fill_color = "시각화에 쓰일 색상",[fill_opacity=, line_opacity= ,]
+legend_name = "칼라 범주 이름",
+).add_to(m)
+```
