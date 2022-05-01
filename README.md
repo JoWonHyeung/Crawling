@@ -189,3 +189,9 @@ fill_color = "시각화에 쓰일 색상",[fill_opacity=, line_opacity= ,]
 legend_name = "칼라 범주 이름",
 ).add_to(m)
 ```
+
+# KoNLPy 
+
+- 한글 형태소 품사 태그표
+
+http://kkma.snu.ac.kr/documents/?doc=postag
