@@ -195,3 +195,7 @@ legend_name = "칼라 범주 이름",
 - 한글 형태소 품사 태그표
 
 http://kkma.snu.ac.kr/documents/?doc=postag
+
+- 한국어 불용어
+
+https://www.ranks.nl/stopwords/korean
