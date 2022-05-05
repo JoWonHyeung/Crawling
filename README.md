@@ -62,6 +62,21 @@ element.text : 텍스트 형식의 콘텐츠
 
 element.get_attribute('속성명') : 속성값
 
+### - Scroll Down
+
+```python
+# ActionChains 를 사용하기 위해서.
+from selenium.webdriver import ActionChains
+
+# id가 something 인 element 를 찾음
+some_tag = driver.find_element_by_id('something')
+
+# somthing element 까지 스크롤
+action = ActionChains(driver)
+action.move_to_element(some_tag).perform()
+
+```
+
 ### - ect...
 
 driver.implicitly_wait(3) : 경우에 따라 페이지 로드가 완료되거나 시작되기 전에 webdriver가 제어권을 반환 할 수 있다. 견고성을 확보하려면 explicit and impliciy waits를 사용하여 요소가 페이지에 존재할 때까지 대기
