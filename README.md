@@ -214,3 +214,7 @@ http://kkma.snu.ac.kr/documents/?doc=postag
 - 한국어 불용어
 
 https://www.ranks.nl/stopwords/korean
+
+# Apriori 알고리즘을 실행할 수 있도록 데이터 전처리
+
+http://rasbt.github.io/mlxtend/user_guide/preprocessing/TransactionEncoder/
