@@ -218,3 +218,8 @@ https://www.ranks.nl/stopwords/korean
 # Apriori 알고리즘을 실행할 수 있도록 데이터 전처리
 
 http://rasbt.github.io/mlxtend/user_guide/preprocessing/TransactionEncoder/
+
+# cross_val_score 반환값
+
+값이 가장 작은 값을 반환한다. 분류인 경우, accuracy 가 높을 수록 좋고 회귀인 경우, rmse, mae 값이 작아야 모델 성능이 좋다. 따라서, 분류인 경우 cross_val_score 을 반환 받고자 
+할 때 -를 붙여서 반환해야 좋은 성능 지표를 반환 받을 수 있다.
